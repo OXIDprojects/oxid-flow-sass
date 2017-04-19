@@ -25,16 +25,16 @@ Further the Flow `theme.less` file was splitted in smaller files.
 
 You need [node](https://nodejs.org/), [grunt](http://gruntjs.com/), [bower](http://bower.io/) and [libsass](http://libsass.org/) (sassc) to run the build process.
 
-Install node dependencies with `$ npm install` and frotnend dependencies with `$ bower install`.
+Install node dependencies with `$ npm install` and frontend dependencies with `$ bower install`.
 
-Inside `package.json` configure the `oxidtheme` path to which directory you want to copy the built CSS.  (see `grunt/tasks/copy.js` taks `copy:oxid`). We usally have the OXID and Theme code in seperate directories, see the folder structure below.
+Inside `package.json` configure the `oxidtheme` path to which directory you want to copy the compiled CSS (see `grunt/tasks/copy.js` taks `copy:oxid`). We usally have the OXID and theme code in seperate directories, see the folder structure below.
 
-Use `$ grunt` to build complete project, or `$ grunt watch` to listen for changes.
+Use `$ grunt` to build the CSS or `$ grunt watch` to listen for changes.
 
 
 ### Folder strucutre
 
-For a more convenient deployment/building we usually store the Sass workflow outsite the actial OXID theme folder and copy the built CSS into the OXID `out/<theme>/` folder with grunt.
+For a more convenient deployment/building we usually store the Sass workflow outsite the actual OXID theme folder and copy the compiled CSS into the OXID `out/<theme>/` folder with grunt.
 
     ├── README.md
     ├── deploy/
@@ -46,9 +46,10 @@ For a more convenient deployment/building we usually store the Sass workflow out
 
 ## Notes
 
-- Twitter Bootstrap 3 is no [longer maintained](https://github.com/twbs/bootstrap/issues/20631). I thought about switching the whole Theme to Bootstrap 4 (which gets us `rem`, `flexbox`, …) but the HTML differences between v3 and v4 are huge, you would need to change all Flow Smarty templates by hand which would be a huge undertaking as well a pain to incorparate future OXID updates. Additionally you lose compatibillity with popular OXID extensions. So v3 it is.
+- Twitter Bootstrap 3 is no [longer maintained](https://github.com/twbs/bootstrap/issues/20631) and 4 is still an alpha release. I thought about switching the whole theme to Bootstrap 4 (which gets us `rem`, `flexbox`, …) but the HTML differences between v3 and v4 are huge, you would need to change all Flow Smarty templates by hand which would be a huge undertaking as well a pain to incorparate future OXID updates. Additionally you lose compatibillity with popular OXID extensions. So v3 it is.
 
 
 ## Meta
 
 Jonathan Ströbele ([@stroebjo](https://twitter.com/stroebjo)) - [pbi planungsbüro INTERNET GmbH](https://planungsbuero.de/)
+
