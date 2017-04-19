@@ -1,0 +1,162 @@
+//== Global box wrapper of list widgets
+
+.boxwrapper {
+	.page-header {
+		position: relative;
+		text-align: center;
+		border-bottom: 0;
+
+		h2, h3, .h3 {
+			font-weight: 200;
+
+			.rss {
+				font-size: 12px;
+				color: orange;
+				line-height: $line-height-large;
+				vertical-align: middle;
+			}
+		}
+
+		.subhead {
+			color: $gray-light;
+		}
+	}
+
+	.list-container {
+		// 4 cols list view
+		.gridView {
+			margin-bottom: $ox-listitem-grid-row-margin-bottom;
+
+			.productBox {
+				.picture {
+					border-bottom: 1px dashed $gray-lighter;
+					width: 100%;
+					height: $ox-listitem-grid-picture-height + $ox-listitem-grid-picture-padding;
+					display: table;
+					margin-bottom: $ox-listitem-grid-picture-padding;
+					table-layout: fixed;
+
+					a {
+						display: table-cell;
+						vertical-align: middle;
+					}
+
+					img {
+						max-height: $ox-listitem-grid-picture-height;
+						margin: 0 auto;
+					}
+				}
+
+				.title {
+					height: $line-height-computed * $ox-listitem-grid-title-rows;
+					overflow: hidden;
+					font-weight: 600;
+				}
+
+				.price {
+					margin-bottom: $grid-gutter-width / 2;
+
+					.lead {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+
+		// 2 cols list view
+		.infogridView {
+			margin-bottom: $ox-listitem-infogrid-row-margin-bottom;
+
+			.productBox {
+
+				.picture {
+					width: 100%;
+					height: $ox-listitem-infogrid-picture-height;
+					display: table;
+					table-layout: fixed;
+
+					a {
+						display: table-cell;
+						vertical-align: middle;
+					}
+
+					img {
+						max-height: $ox-listitem-infogrid-picture-height;
+						margin: 0 auto;
+					}
+				}
+
+				.title {
+					min-height: $line-height-computed * $ox-listitem-infogrid-title-rows;
+					font-weight: 600;
+				}
+
+				.shortdesc {
+					margin-bottom: $line-height-computed;
+				}
+
+				.price {
+					margin-bottom: $line-height-computed / 2;
+
+					.lead {
+						font-weight: 400;
+					}
+				}
+			}
+
+		}
+
+		// 1 col list view
+		.lineView {
+			margin-top: $grid-gutter-width / 2;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			.productBox {
+
+				form {
+					border-bottom: 1px dashed $gray-lighter;
+					padding-bottom: $grid-gutter-width / 2;
+				}
+
+				.picture {
+					img {
+						max-height: 150px;
+						margin: 0 auto;
+					}
+				}
+
+				.title {
+					font-weight: 600;
+				}
+
+				.functions {
+					.price {
+						font-weight: 400;
+					}
+
+					.selectorsBox {
+						margin: $line-height-computed / 2 0;
+					}
+
+					.form-group {
+						margin-top: $line-height-computed / 2;
+						margin-bottom: 0;
+					}
+
+					input.amount {
+						width: 90px;
+						float: right;
+					}
+				}
+			}
+		}
+
+		.dropdown-wrapper {
+			display: inline-block;
+			position: relative;
+		}
+	}
+}

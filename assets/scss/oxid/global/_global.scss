@@ -1,0 +1,60 @@
+label {
+	font-weight: normal;
+
+	&.req {
+		font-weight: bold;
+	}
+}
+
+.list-group-item {
+	&.active {
+		&,
+		& a,
+		&:hover,
+		&:focus {
+			color: #FFF;
+		}
+	}
+}
+
+.text-secondary {
+	color: $brand-secondary;
+}
+
+/* Rotation Animations (Webkit) */
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rerotate {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+	to {
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+/* Rotation Animations (Firefox) */
+@-moz-keyframes rotate {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes rerotate {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+	to {
+		-moz-transform: rotate(0deg);
+	}
+}

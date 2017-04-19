@@ -1,0 +1,34 @@
+@import "config";
+
+@import "oxid/variables-twbs"; // flow theme twbs3 variables
+
+// include OXID flow v1.0.0 vendor libraries
+@import "lib/bootstrap3-custom";
+@import "../bower/bootstrap-select/sass/bootstrap-select";
+@import "../bower/font-awesome-sass/assets/stylesheets/font-awesome";
+@import "../bower/photoswipe/src/css/main";
+
+
+// oxid flow theme, modularized and coverted to Sass/Scss
+@import "oxid/variables-oxid"; // OXID Flow specific vars
+@import "oxid/responsive";
+@import "oxid/theme";
+
+
+// Layouts
+// <% include layouts %>
+
+
+// Components, shared across the hole project.
+//
+// <% include components %>
+
+
+// Modules
+// Usally consist of multiple components and appear just once across the website.
+//
+// <% include modules %>
+
+
+// shame on me...
+@import "shame";

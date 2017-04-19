@@ -1,0 +1,140 @@
+//== Global settings for flexslider
+
+.flexslider {
+    border: none;
+    background: transparent;
+    margin-bottom:  $grid-gutter-width / 2;
+
+    .flex-control-paging {
+        display: none;
+    }
+
+    .flex-direction-nav {
+        .flex-prev,
+        .flex-next {
+            background-color: #000;
+            opacity: 0.6;
+            border-radius: 50%;
+
+            &::before {
+                color: #FFF;
+                font-size: 30px;
+                text-shadow: none;
+                transition: color 0.3s;
+            }
+
+            &:hover::before {
+                color: $brand-primary;
+            }
+        }
+
+        .flex-prev {
+            left: $grid-gutter-width / 2;
+            text-align: left;
+
+            &::before {
+                padding-left: 14px;
+                margin-top: -2px;
+            }
+        }
+
+        .flex-next {
+            right:  $grid-gutter-width / 2;
+            text-align: right;
+
+            &::before {
+                padding-right: 14px;
+                margin-top: -2px;
+            }
+        }
+    }
+
+    .slides > li {
+        position: relative;
+    }
+
+    .flex-caption {
+        @media( max-width: $screen-xs-max )
+        {
+            display:none;
+        }
+
+        background: #000;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        transition: all 0.3s ease-in-out;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+                .title {
+                    text-decoration: underline;
+                }
+                .shortdesc {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .title {
+            font-weight: bold;
+        }
+    }
+
+    &:hover {
+        .flex-caption {
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+        }
+    }
+}
+
+#manufacturerSlider {
+    border-top: 2px solid $ox-start-manufacturerslider-border;
+    border-bottom: 2px solid $ox-start-manufacturerslider-border;
+    background-color: $ox-start-manufacturerslider-bg;
+    padding-bottom: $line-height-computed * 2;
+    margin-bottom: 0;
+
+    .flexslider {
+        li {
+            text-align: center;
+
+            img {
+                width: auto;
+                max-width: 100px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.breadcrumb {
+    font-size: 12px;
+    margin: 0;
+
+    > .active a {
+        color: $breadcrumb-active-color;
+    }
+}
+
+.refineParams {
+    margin-bottom: 15px;
+
+    &.bottomParams {
+        @extend .text-center;
+    }
+
+    .pagination {
+        margin: 0;
+    }
+}

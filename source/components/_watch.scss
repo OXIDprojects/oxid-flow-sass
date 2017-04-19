@@ -1,0 +1,69 @@
+// Why is this file required? I'dont know. It just is. ...and no. Don' hide it (.watch.scss).
+//
+// If it's not present gaze (used by grunt-contrib-watch to watch for new files) doesn't get
+// notifed about new files in subdirectories - there has to be a file in the middle somehow.
+//
+// https://github.com/shama/gaze/pull/103
+//
+// Hours wasted on this? Many. Keyboards shattered over grunt not watching? A lot.
+//
+//  _____       _
+// |  _  |___ _| |   ___ ___    _____ _ _
+// |     |   | . |  |_ -| . |  |     | | |
+// |__|__|_|_|___|  |___|___|  |_|_|_|_  |
+//                                  |___|
+//
+//
+//                     _       _      _           _                                  `...``
+//           _ _ _ ___| |_ ___| |_   | |_ ___ ___|_|___ ___                  ``.:+o+///+o+++oo/://oo/+/:-.
+//          | | | | .'|  _|  _|   |  | . | -_| . | |   |_ -|_            `.--+/--:://:////:/++++ydmds+yyoo++/-.
+//          |_____|__,|_| |___|_|_|  |___|___|_  |_|_|_|___|_|        ``-------:/++//+oso//:+shyhhdmdmdmmdhyhysy+.
+//                                           |___|                     `.:::://:/oyyhhyyhyys+osddmmNNNNNNmmmmmdhhhsysyho-
+//                                                                    ```:+oyhdyooyhhdddhdddhdyydddhhdNmmmNNNNNNdydysyhhhhhs:
+//                                                                  ``` ./ssydds:.+syy+hdmmmddhyhhssydmmmNNNNNNNmhdhysshddddhy/`
+//                                                                 ````-+syssmmo--/+os/hmmmmmmmdyhdddmmmmmmNNNmNmmdddddhhdmmhhdh.
+//                                                                ```-/shhy+omd+--:/++-dmmdddddhoyhmmdddmmmNNmdNNNNmdddhhhhhddddo
+//                                                              ````.-/o/-::+dd+--//++-oydyhdmho+odmmhdddmmmNNmdmmNNmmdhhhyyyhddy
+//                                                            ```  ``.----..-/h+--////-++osdmmh/symNmdyddmmNNNdddddmNNmmdddhhyydd`
+//                                                            `.`````.-...../oo:..:+o+-so+smNmdodmNmmdhdmmmmNNmhhhhdmmNmmmmmdhyyhh.
+//                                                       /-` `.....-:/oss+oyyy+:``-oss/ooyhdmmmhmNmddmdhmmdmNNNmdhhhmmmmmmmmmdhhhdh.
+//                                                     `:/+: `````.-::/++sos/oo/:-./+ooodmdhdmmmNmhhdmmdddhhmNNmdhshdmmmmmmNmmdddhds
+//                                                     `.-..``.....-://::/+s++s++/+so+/:hNmhhddmdyyhhdhhdmdhdmmdyyoohmmmmmmNNNmdhhdd`
+//                                                          .---:/++//:/:/:/osysssyyyssosdddddddyhdhhhhhdddhhddysoyyyhddddmmNmmddddd-
+//                                                          .:////+osys+//+oydhyyhhyhyyyshhhhhhddddhhydhhyyshdmdyssyyhdddmNNNmmhhdmdy-
+//                                                         `-:+osssssyhhhhhddmdhhhdhyyhsssyhyyhhyysssyyssssyhdddhsyhhhdhdmmmmmdhdhmddo
+//                                                         `:+oosyyyyyhhyhhhdyyyoshhyds/+yhdhys///oyhhoossyyhhhddhhdmmhhdddhyhddhhmddo
+//                                                    `     -+oossssssssssy+/:+:-+oosdh++yhhyo//:/oydsoosyhoshmdhdhyyysohdmmhyyyyhdddo
+//                                                   `..``` ./ooossssoooos+..:o/+ssshyhysyhysoo+++oyysssyyhsoyhyyhhyyysoydmNmdddyyhddo
+//                                                  .://````./+o++ooosooo++o/-+/ss++dhhhyyyssoossyhhhhhyyyhhyyshdddddhhyyddNmmddhyhhh+
+//                                                `:///so:``./o++++ooo+//+sys`:-++/+sysysoooshdmmmmmdhyyyyhhhdddddmNNmmdhydNmmddhhhydo
+//                                               .//:.../yhyssysooooso+/-:++/:/-:-:://+/:/ososhmddmmdo//oyhhdmmmmddmddmdysdNmddhhhdydo
+//                                             `-//:-. `./odmmmddhyo/--::+ossssooo+:+oo/+:-.-/syddmdo:..+yyhhdddmmddhyhhssmmmmmmdhhhho
+//                                            .-//:::`.:/+ydmmmmmdysyyyhhddddddddddddhhddhs/-/oyhys/-.`./syyyyyyyyyyssyysymmmmNmmdddds
+//                                          .-:::::..-/+oshmNNNNmmmmmmdhhhyyyyhddhhys+ohddds-:///---.` `-/+++ssoo+++//+oshmmmmmmmdddmo
+//                                        `-+/////...-/ssydmNNNNNNNNNmdhhhhhsyhdhhyso//+/:-...---:/+-` `-:://+oso+++++++odNmmmmdmddy:`
+//                                       `//+///+:-//:+shdmNNNNNNNNNmdddyohdyydh//.```````.-.-.-:+o+````-/+++++++oooooooodNmNmmdhy:`
+//                                      .+so+:/o:/ooyosydmNNNNNNNNmhosdmdosdms++.`` ` ```.``..:/+oo:.:///oyhddho+syyyyys+dNNmmdy/`
+//                                     ./+hs/++/-+sosyhhdNNNNNNNNmy+/shddhhmmdh+`     ``-``.-:+ss+--.-//:oddhysooosyyyhsodmddh/`
+//                                   `//:+hhss:-:/syyhdydmNNNNNNNds+osdmmmmmmmm/` ` ```.....:++/:-......-oso+oooosysssyssdhyy.
+//                                  .ss::ohdddy+/-:+hdddmNNNNNNNms+odhmmNNNNNho+```````..-..-..----....-:/++osssshhysssohmms.
+//                                `:syo:oyyhmmmy/--ohdmNNNNNNNNm:.-/ymNNmdNmho+/.```````.-..``-///:-:oyhhdhddmhsosyyssssdd+`
+//                               :+///+/hdyydmmds--/hmNNNNNNNNm:   `-+syhdddso+//-``````..-.`.-/:-.`.-+yddhysoooosysssyy+`
+//                               o+/-//hddyyhdmms::omNNNNNNNNN+       `.-yyooo+///+.````..-...--.--...-/oooossssossssydy.
+//                              .//:++sddhhsyddys/odNNNNNNNNNs`         :+osso+://yy-```..---...-::--:/oydddddysosssodm.
+//                            `:/::o+shdddyoohyyyhmNNNNNNNNNm-         -/ossso+::/hmd+.``........://++sydmmdhysoosssdhh
+//                           .//+:o/oyhhddhoshdmmNNNNNNNNNNNd.       `./+o+ooo+::/dmmdo+-........-:/o/oossssooossyyhhhs
+//                          `:+//oooyhddmmhyddmNNNNNNNNNNNNNmso+/::::-/osyoysssoo+ydmNmdhy+:------:/++++osssssyyhddhdmh
+//                         .:/+++o+syydmmddddmNNNNNNNNNNNNNNmdddmmddhhhdddddddddhhddmmmNNNmmyo///++osssyhhhdhddmNNmmdmd`
+//                        :+++/+ooosyyddmdddmNNNNNNNNNNNNNNmddddmdmNNmmmmmNmmmddmmmmmmNmNNNNNNmmhhhdddmmmmmmmNNNNNmdmmh.
+//                       -oo/ooooosoyydmdddmNNNNNNNNNNNNNNNmddhhmmddmmmmmmmmmNmmmmmNNNNNNNNNNNNNNNNmhmmNNNNMMNMMNmddmdh`
+//                       +oo+:o/:/syhhdmdddNNNNNNNNNNNNNNNNmddhhdmmdddmmmmmmmmdmmNNNNNNNNNNNNNNNNNNNNNNNNNNmmNNNNmdmmdho/-`
+//                       /++oso/oohhdddmddmNNNNNNNNNNNNNNNmmmdddmmNmdddmmmmmNmdddmmmmmmmmNNNNNNNNNNNNNNNmmmddmmmmmmmmmmmmmho-`
+//                       //+yssyyyhhddmddmNNNNNNNNNNNNNNNNmmmddmmmNNmmmdddmmmmmmmmmmmdyhddmNNNNNNNmdmmmdydhdddNmmmddmmmmmddhdy/`
+//                       ./soosyyyyhddddmNNNNNNNNNNNNNNNNNmmmmmddmNNNNNmdddddmmmmmmmmmdhhdmmmNNNNNmhyyssodddddmNmmmhyhmmmdhhdddh+`
+//                       `/ysyyyyyyhhddmNNNNNNNNNNNNNNNNNNmNmmmdddmNNNNNNddddddmmmmmmmmdhhdmmmmmNNmyoyhhhhmdddmNmmmdmyyhmddddhdddh+`
+//                        ohhhhhyhhhddmNNNNNNNNNNNNNNNNNNNmNmmmddddNNNNNNmddddmmdddmmmmmmddmmmddNmdysoosshddmmmmNmmdhyyydmmddddddddho.
+//                        oyhhddhhhhddmNNNNNNNNNNNNNNNNNNNmmmmmmmdmNNNNNNNmmmddddmmddmmmmmdddmdddmddmhdddmmmmmmmNNdmdsyohmdddddddmdddd/`
+//                       .hdhdmmmdyhdmmNNNNNNNNNNNNNNNNNNNmmmmmmmmmNNNNNNNNNNmmdddmdmmmmdmmmmddmdmmNmmmmmmmmmmmmdNdmmddhsmddmddddmdddmhy+-`
+//                       .dNmdmddhyhddmmmNNNNNNNNNNNNNNNNNNNmmNNNmmNNNNNmmNNNNNNmddddmmmdmmdmhddmmmmmmmmNNNNNNNNmNNmmmmddmmmmmmmmmmNmmddhddhyy-
+//

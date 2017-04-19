@@ -1,0 +1,59 @@
+#footer {
+	border-top: 2px solid $ox-footer-border;
+	border-bottom: 2px solid $ox-footer-border;
+	background-color: $ox-footer-bg;
+	color: $ox-footer-color;
+	padding: $grid-gutter-width 0;
+
+	.footer-box {
+		.footer-box-title {
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+
+		.footer-box-content {
+			font-weight: 400;
+		}
+
+		&.footer-box-facebook {
+			margin-top: $line-height-computed / 2;
+		}
+	}
+
+	.social-links {
+		li {
+			margin: 0 10px;
+			font-size: 16px;
+
+			a {
+				text-decoration: none;
+
+				i {
+					font-size: 25px;
+					vertical-align: middle;
+					transition: color .2s;
+
+					&:before {
+						// Antialising for icons
+						-webkit-text-stroke: .3px;
+						font-smooth: auto;
+					}
+				}
+
+				.fa-facebook           { color: $ox-footer-color-facebook; }
+				.fa-google-plus-square { color: $ox-footer-color-google-plus; }
+				.fa-twitter            { color: $ox-footer-color-twitter; }
+				.fa-youtube-square     { color: $ox-footer-color-youtube; }
+				.fa-wordpress          { color: $ox-footer-color-blog; }
+
+				&:hover {
+					.fa-facebook           { color: darken( $ox-footer-color-facebook,    15% ); }
+					.fa-google-plus-square { color: darken( $ox-footer-color-google-plus, 15% ); }
+					.fa-twitter            { color: darken( $ox-footer-color-twitter,     15% ); }
+					.fa-youtube-square     { color: darken( $ox-footer-color-youtube,     15% ); }
+					.fa-wordpress          { color: darken( $ox-footer-color-blog,        15% ); }
+				}
+			}
+		}
+	}
+}

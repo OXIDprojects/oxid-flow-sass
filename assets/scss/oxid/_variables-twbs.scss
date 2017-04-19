@@ -1,0 +1,82 @@
+/**
+ * This file is part of OXID eSales Flow theme.
+ *
+ * OXID eSales Flow theme is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * OXID eSales Flow theme is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with OXID eSales Flow theme.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @link      http://www.oxid-esales.com
+ * @copyright (C) OXID eSales AG 2003-2016
+ */
+
+//
+// Theme Variables
+// --------------------------------------------------
+
+//== Colors
+//
+//## Brand colors to use across Flow
+
+$brand-primary:   #009EC0;
+$brand-secondary: #FC6621;
+
+//
+// Custom Variables
+// --------------------------------------------------
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-base: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//## Headings
+
+$h1-font-size:     32px;
+$h2-font-size:     24px;
+$h3-font-size:     18px;
+$h4-font-size:     16px;
+$h5-font-size:     13px;
+$h6-font-size:     10px;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+$link-color:       lighten(#000, 20%);
+$link-hover-color: $brand-primary;
+$link-disabled-color: #C7C7C7;
+
+
+//== Navbar
+//
+//##
+
+$navbar-height:                    40px;
+$navbar-margin-bottom:             0;
+$navbar-border-radius:             0;
+$navbar-default-bg:                #FFF;
+$navbar-default-color:             $brand-primary;
+$navbar-default-link-active-bg:    transparent;
+$navbar-default-link-hover-bg:     $navbar-default-link-active-bg;
+$navbar-default-link-active-color: $brand-secondary;
+$navbar-default-link-hover-color:  $navbar-default-link-active-color;
+
+
+//== Breadcrumbs
+//
+//##
+
+$breadcrumb-bg:                 transparent;
+$breadcrumb-active-color:       $brand-secondary;
+$breadcrumb-padding-horizontal: 0;

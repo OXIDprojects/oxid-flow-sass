@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+
+test -n "$(grep -E '^[a-z]+([\([0-9_a-z\)]+)?: ' "$1")" || {
+echo >&2 "ERROR: invalid commit message, use <type>(<scope>): <subject>\n\ne.g. fix(navi): add second level\n\nOr use wip: if you are lacy ;-)"
+	exit 1
+}

@@ -1,0 +1,28 @@
+//== Global transitions
+
+.btn,
+.nav li a,
+.dropdown li a,
+.pagination a {
+	&:hover {
+		transition: color .3s, background-color .3s, border .3s;
+	}
+}
+
+//== Global spacer class
+
+.spacer {
+	height: $grid-gutter-width;
+	@include clearfix();
+}
+
+#wrapper {
+	background-color: $ox-container-wrapper-background-color;
+}
+
+#content {
+	.page-header:first-child {
+		margin-top: 0;
+	}
+}
+

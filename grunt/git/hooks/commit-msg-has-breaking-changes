@@ -1,0 +1,31 @@
+#!/bin/bash
+
+output=""
+
+# get all changed template (php) files in this commit
+changed_files=$(git diff --cached --name-only "source/*/*.php")
+
+# now we check the .json if this module is marked as "final"
+
+
+while read -r tpl_file; do
+	printf "Checking template file ${YELLOW}%s${NORMAL} for breaking changes…\n" "$tpl_file"
+
+	json_file="${tpl_file/\.php/.json}"
+
+	json_status=$(grep "\"status\": \"final\"" $json_file |wc -l)
+
+	# > 0 if the pattern is marked as "final"
+	# so we check if the commit contains "BREAKING CHANGES", if not warn the user.
+	if [ "$json_status" -gt 0 ] ; then
+
+		test -n "$(grep -E 'BREAKING CHANGES' "$1")" || {
+			output="$output\nERROR: $tpl_file seems to contain breaking changes. Please investigate."
+			exit 1
+		}
+	fi
+
+
+
+done <<< "$changed_files"
+

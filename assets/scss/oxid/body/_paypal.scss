@@ -1,0 +1,32 @@
+//== PayPal related
+
+.paypalHelpBox {
+	@extend .alert;
+	@extend .alert-info;
+
+	display: none;
+	position: absolute;
+}
+
+#paypalExpressCheckoutDetailsBox {
+	width: 100%;
+	float: none!important;
+
+	&.paypalExpressCheckoutDetailsBox .paypalExpressCheckoutMsg {
+		float: none;
+	}
+}
+
+.paypalExpressCheckoutBox {
+	padding-right: 15px!important;
+	margin: 0 15px 0 0!important;
+
+	.paypalExpressCheckoutMsg {
+		clear: both;
+	}
+}
+
+#paypalExpressCheckoutMiniBasketImage {
+	float: right!important;
+}
+
